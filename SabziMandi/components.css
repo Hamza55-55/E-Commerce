@@ -1,0 +1,152 @@
+#header{
+    
+    width: 40rem;
+    border: 3px solid tomato;
+    border-radius: 5px;
+    
+}
+#header a{
+    margin-left: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    
+}
+#header a:hover{
+    border: 2px;
+    border-radius: 3px;
+    background-color: thistle;
+    color: rgb(255, 255, 255);   
+}
+#header img{
+    height: 90px;
+    width: 200px;
+}
+#title{
+    font-family: cursive;
+    font-size: 40px;
+    position: relative;
+    top: -22px;
+}
+.navbar{
+    position: relative;
+    left: 5rem;
+}
+.searchbar{
+    position: relative;
+    left: 10rem;
+    
+}
+.searchbar input{
+    width: 7rem;
+}
+ .searchbar button{
+    color: white;
+    background-color: tomato;
+    height: 25px;
+    width: 57px;
+    border-style: none;
+    border-radius: 5px;
+}
+ .searchbar button:hover{
+    color: white;
+    background-color: thistle;
+    height: 30px;
+    width: 62px;
+}
+.searchbar input{
+    border-radius: 5px;
+}
+
+/* content */
+
+#content{
+    font-family: cursive;
+   
+}
+#passage{
+    text-align: center;
+}
+#passage h4{
+    color: rgb(51, 137, 51);
+    font-weight: bolder;
+}
+#passage h2{
+    padding: 1.4rem;
+    text-decoration: underline;
+}
+.card{
+    width: 15rem;
+    border: 1px solid  tomato ;
+    height: 23rem;
+    border-radius: 5px;
+}
+.card:hover{
+    
+    border: 1px solid  thistle;
+    
+    border-radius: 5px;
+}
+.card img{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 5px;
+    padding: 2px;
+    position: relative;
+    top: 8px;
+    left: 10px;
+    border: 2px solid thistle;
+}
+.card img:hover{
+    width: 13.5rem;
+    height: 13.5rem;
+    border-radius: 5px;
+    
+}
+.card button{
+    font-family: cursive;
+    font-size: 13px;
+    font-weight: bolder;
+    background-color: tomato;
+    color: white;
+    height: 25px;
+    width: 170px;
+    margin-left: 2rem;
+    border-style: none;
+    border-radius: 7px;
+}
+.card button:hover{
+    
+    background-color: thistle;
+    height: 25px;
+    width: 200px;
+
+}
+/* footer  */
+#footer {
+   
+    height: 300px;
+    text-align: center;
+    font-family: cursive;
+    border: 3px solid tomato;
+    border-radius: 5px;
+    /* background-image: url(footer2.jpg); */
+}
+#footer table{
+    color: green;
+    font-weight: bold;
+}
+#footer button{
+    background-color: tomato;
+    color: white;
+    height: 25px;
+    width: 57px;
+    border-style: none;
+    border-radius: 5px;
+}
+#footer button:hover{
+    color: white;
+    background-color: thistle;
+    height: 30px;
+    width: 62px;
+}

@@ -1,0 +1,106 @@
+<%-include('linkbootstrapcss')%>
+<script>
+    function validation(){
+        let p_idBox=document.getElementById("prod_Id");
+        let pNameBox=document.getElementById("prod_name");
+        let pCategoryBox=document.getElementById("prod_category");
+        let pUnitBox=document.getElementById("prod_unit");
+        let pPriceBox=document.getElementById("prod_price");
+        let pQuantityBox=document.getElementById("prod_quantity");
+        let pFilePathBox=document.getElementById("prod_filepath");
+        
+        let pNameErrorBox=document.getElementById("pNameError");
+        let pCategoryErrorBox=document.getElementById("pCategoryError");
+        let pUnitErrorBox=document.getElementById("pUnitError");
+        let pPriceErrorBox=document.getElementById("pPriceError");
+        let pQuantityErrorBox=document.getElementById("pQuantityError");
+        let pFilePathErrorBox=document.getElementById("pFilePathError");
+        
+        pNameErrorBox.innerHTML="&nbsp;";
+        pCategoryErrorBox.innerHTML="&nbsp;";
+        pUnitErrorBox.innerHTML="&nbsp;";
+        pPriceErrorBox.innerHTML="&nbsp;";
+        pQuantityErrorBox.innerHTML="&nbsp;";
+        pFilePathErrorBox.innerHTML="&nbsp;";
+
+        if(pNameBox.value == ""){
+            pNameErrorBox.innerHTML="*";
+            return false;
+    }
+        if(pCategoryBox.value == "Select Category"){
+            pCategoryErrorBox.innerHTML="*";
+            return false;
+    }
+        if(pUnitBox.value == "Select Unit"){
+            pUnitErrorBox.innerHTML="*";
+            return false;
+    }
+        if(pPriceBox.value == ""){
+            pPriceErrorBox.innerHTML="*";
+            return false;
+    }
+        if(pQuantityBox.value == ""){
+            pQuantityErrorBox.innerHTML="*";
+            return false;
+    }
+        if(pFilePathBox.value == ""){
+            pFilePathErrorBox.innerHTML="*";
+            return false;
+    }
+
+}
+
+
+
+</script>
+<form action="/admin/saveProduct.htm" method="Post" onsubmit=" return validation();">
+    <table >
+        <tr><td><input type="hidden" name="p_id" id="prod_Id"></td></tr>
+        <tr><td>&nbsp;</td></tr>
+        <tr><td>Product Name <span id="pNameError" style="color: red;font-size: 20px;font-weight: bold;">&nbsp;</span></td><td><input type="text" name="p_name" id="prod_name"></td></tr>
+        <tr><td>&nbsp;</td></tr>
+        <tr>
+            <td>Product Category <span id="pCategoryError" style="color: red;font-size: 20px;font-weight: bold;">&nbsp;</span></td>
+            <td><select name="p_category" id="prod_category" style="width: 12rem;">
+                <option value="Select Category">Select Category</option>
+                <option value="Fruit">Fruit</option>
+                <option value="Vegetables">Vegetables</option>
+            </select>
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>Select Unit <span id="pUnitError" style="color: red;font-size: 20px;font-weight: bold;">&nbsp;</span></td>
+            <td><select name="p_unit" id="prod_unit" style="width: 12rem;">
+                <option value="Select Unit">Select Unit</option>
+                <option value="Kg">Kg</option>
+                <option value="Dozen">Dozen</option>
+            </select></td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+
+
+        <tr><td>Product Price <span id="pPriceError" style="color: red;font-size: 20px;font-weight: bold;">&nbsp;</span></td><td><input type="number" name="p_price" id="prod_price"></td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+
+        <tr><td>Product Quantity<span id="pQuantityError" style="color: red;font-size: 20px;font-weight: bold;">&nbsp;</span></td><td><input type="text" name="p_quantity" id="prod_quantity"></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+
+        <tr><td>Product Order</td>
+            <td><select name="p_display_order" id="prod_display_order" style="width: 12rem;">
+                <option value="Select Order">Select Order</option>
+                <option value="Ascending Order">Ascending Order</option>
+                <option value="Descending Order">Descending Order</option>
+            </select></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+
+        <tr><td>Choose File <span id="pFilePathError" style="color: red;font-size: 20px;font-weight: bold;">&nbsp;</span></td><td><input type="file" name="p_filepath" id="prod_filepath"></td></tr>   
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+    </table>

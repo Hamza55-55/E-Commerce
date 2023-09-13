@@ -1,0 +1,113 @@
+<html>
+    <head><title></title>
+    <style>
+        #header{
+            height: 10rem;
+            border: 3px solid thistle;
+        }
+        #header a{
+            color: black;
+            text-decoration: none;
+            font-weight: bolder;
+            
+        }
+        #header a:hover{
+            border: 2px;
+            border-radius: 3px;
+            background-color: thistle;
+            color: rgb(255, 255, 255);   
+        }
+        #header img{
+            height: 90px;
+            width: 200px;
+        }
+        #title{
+            font-family: cursive;
+            font-size: 40px;
+            
+        }
+        .navbar{
+            position: relative;
+            left: 22rem;
+            width: 30rem;
+        }
+        .searchbar{
+            position: relative;
+            left: 56rem;
+            top: -2rem;
+            width: 30rem;
+        }
+        .searchbar button{
+            position: relative;
+            top: -.2rem;
+            color: white;
+            background-color: thistle;
+            height: 25px;
+            width: 57px;
+            border-style: none;
+            border-radius: 5px;
+        }
+        .searchbar button:hover{
+            color: white;
+            background-color: tomato;
+            height: 30px;
+            width: 62px;
+        }
+        .searchbar input{
+            border-radius: 5px;
+        }
+
+        #footer {
+            height: 100px;
+            text-align: center;
+            font-family: cursive;
+            border: 3px solid thistle;
+            border-radius: 5px;
+            /* background-image: url(footer2.jpg); */
+        }
+        #footer table{
+            color: green;
+            font-weight: bold;
+        }
+        #footer button{
+            background-color: tomato;
+            color: white;
+            height: 25px;
+            width: 57px;
+            border-style: none;
+            border-radius: 5px;
+        }
+        #footer button:hover{
+            color: white;
+            background-color: thistle;
+            height: 30px;
+            width: 62px;
+        }
+    </style>
+    
+    </head>
+    <body>
+        <table  style="position: relative;left: 11rem;top: 1rem;width: 73rem;border-radius: 4em;" >
+            <tr>
+                <td id="header">
+                <%- include('./header')%>
+                </td>
+                
+            </tr>
+            
+            <tr>
+                <td id="content">
+                    <h2 style="font-family: cursive;color: green;text-align: center;">ADMIN PANEL</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="footer">
+                <%- include('./footer')%>
+                </td>
+            </tr>
+           
+
+        </table>
+    </body>
+</html>
